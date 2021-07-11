@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo " B4GG3R"
+echo " Usage: autofuff urls.txt"
+
+for urlist in $(cat $1); do echo "TARGET: $urlist" && ffuf -u "$urlist"FUZZ -w ~/wordlist/commondir -s | head -10; done
